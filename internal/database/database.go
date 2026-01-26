@@ -31,5 +31,7 @@ func NewDatabase() (*gorm.DB, error) {
 		return nil, err
 	}
 
+	RunMigrations(db)
+
 	return db, nil
 }
